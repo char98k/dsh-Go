@@ -16,7 +16,7 @@ RemoteNetworkRoute remoteNetworkRoute(List<ConnectivityResult> interfaces) {
 /// Interface hints only; ICE validates actual reachability and the selected path.
 List<remote.RemoteTransportMode> transportsForRemoteRoute(RemoteNetworkRoute route) =>
     route == RemoteNetworkRoute.remote
-    ? const [remote.RemoteTransportMode.p2p, remote.RemoteTransportMode.turn, remote.RemoteTransportMode.relay]
+    ? const [remote.RemoteTransportMode.relay]
     : remote.RemoteTransportMode.values;
 
 Future<RemoteNetworkRoute> resolveRemoteNetworkRoute() async {
